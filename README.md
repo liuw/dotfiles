@@ -14,7 +14,7 @@ config config status.showUntrackedFiles no
 
 git clone --separate-git-dir=$HOME/dotfiles git@github.com:liuw/dotfiles.git $HOME/conf-tmp
 
-rsync --recursive --verbose --exclude '.git' conf-tmp $HOME
+rsync --recursive --verbose --exclude '.git' $HOME/conf-tmp/ $HOME/
 
 rm -rf conf-tmp
 
