@@ -47,10 +47,8 @@ set ttyfast
 syntax on
 colorscheme desert
 
-" Highlight on overlength
+" Highlight boundary. Use 80 by default but can be overridden.
 set colorcolumn=80
-highlight link OverLength colorcolumn
-" exec 'match OverLength /\%'.&cc.'v.\+/'
 
 " Inspect first and last 10 lines for Vim modeline
 " Help modeline for more information
