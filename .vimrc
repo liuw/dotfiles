@@ -3,9 +3,9 @@ set nobackup
 " let mapleader = ','
 let mapleader = "\<Space>"
 
-" plugins
-"  see https://github.com/junegunn/vim-plug
-"  need to have vim-plug installed
+" Plugins
+"  See https://github.com/junegunn/vim-plug
+"  Need to have vim-plug installed
 call plug#begin('~/.vim/plugged')
 
 " UI improvement
@@ -24,15 +24,15 @@ Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
-" searching options
+" Searching options
 set hlsearch incsearch
 set ignorecase smartcase
 
-" saner split
+" Saner split
 set splitright
 set splitbelow
 
-" general user interface
+" General user interface
 set number
 set ruler
 set showcmd
@@ -45,30 +45,30 @@ set ttyfast
 syntax on
 colorscheme desert
 
-" highlight on overlength
+" Highlight on overlength
 if exists('+colorcolumn')
 	set colorcolumn=80
 	highlight link OverLength colorcolumn
 	" exec 'match OverLength /\%'.&cc.'v.\+/'
 endif
 
-" inspect first and last 10 lines for Vim modeline
-" help modeline for more information
+" Inspect first and last 10 lines for Vim modeline
+" Help modeline for more information
 set modelines=10
 
-" enable Vim to edit multiple files
+" Enable Vim to edit multiple files
 set hidden
 
-" bigger command history
+" Bigger command history
 set history=1000
 
-" text editing, can be override by modeline
+" Text editing, can be override by modeline
 set textwidth=0
 set nowrap
 set autoread autowrite
 set clipboard+=unnamed " yanks go to clipboard
 
-" customized mappings
+" Customized mappings
 imap jk <Esc>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
@@ -79,27 +79,27 @@ nmap <silent> <s-tab> :bp<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 nnoremap <F5> :buffers<CR>:buffer<Space>
-" fzf
+" FZF
 map <C-p> :Files<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
 map <C-L> <C-W>l<C-W>_
-" clear highlighted search
+" Clear highlighted search
 nmap <silent> <leader>/ :nohlsearch<CR>
-" shortcut to edit file in the same directory
+" Shortcut to edit file in the same directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
-" show invisibles
+" Show invisibles
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 " set list
 
-" auto change directory to current buffer
+" Auto change directory to current buffer
 " set autochdir
 " autocmd BufEnter * silent! lcd %:p:h " make sure plugins work
 
-" commands and auto commands
+" Commands and auto commands
 "
 command! W exec 'w !sudo tee % > /dev/null' | e!
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown spell
