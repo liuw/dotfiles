@@ -20,6 +20,7 @@ set showmatch
 set linebreak
 set laststatus=2
 set guioptions-=T
+set ttyfast
 syntax on
 colorscheme desert
 
