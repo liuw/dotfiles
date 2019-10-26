@@ -7,6 +7,10 @@ let mapleader = "\<Space>"
 set hlsearch incsearch
 set ignorecase smartcase
 
+" saner split
+set splitright
+set splitbelow
+
 " general user interface
 set number
 set ruler
@@ -15,6 +19,7 @@ set wildmenu wildmode=list:longest
 set showmatch
 set linebreak
 set laststatus=2
+set guioptions-=T
 syntax on
 colorscheme desert
 
@@ -42,7 +47,9 @@ set autoread autowrite
 set clipboard+=unnamed " yanks go to clipboard
 
 " customized mappings
-imap jk <Esc>:w<CR>
+imap jk <Esc>
+nmap <leader>w :w<CR>
+nmap <leader>q :q<CR>
 map <UP> gk
 map <DOWN> gj
 nmap <silent> <tab> :bn<CR>
