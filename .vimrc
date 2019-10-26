@@ -113,3 +113,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Rust settings
+let g:rustfmt_autosave = 1
+autocmd FileType rust set colorcolumn=100 shiftwidth=4 softtabstop=4 tabstop=4 et
