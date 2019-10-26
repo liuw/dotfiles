@@ -1,0 +1,80 @@
+set nocompatible
+set nobackup
+
+" searching options
+set hlsearch incsearch
+set ignorecase smartcase
+
+" general user interface
+set number
+set ruler
+set showcmd
+set wildmenu wildmode=list:longest
+set showmatch
+set linebreak
+set laststatus=2
+syntax on
+colorscheme desert
+
+" highlight on overlength
+if exists('+colorcolumn')
+	set colorcolumn=80
+	highlight link OverLength colorcolumn
+	" exec 'match OverLength /\%'.&cc.'v.\+/'
+endif
+
+" inspect first and last 10 lines for Vim modeline
+" help modeline for more information
+set modelines=10
+
+" enable Vim to edit multiple files
+set hidden
+
+" bigger command history
+set history=1000
+
+" text editing, can be override by modeline
+set textwidth=0
+set nowrap
+set autoread autowrite
+set clipboard+=unnamed " yanks go to clipboard
+
+" customized mappings
+imap jk <Esc>:w<CR>
+map <UP> gk
+map <DOWN> gj
+nmap <silent> <tab> :bn<CR>
+nmap <silent> <s-tab> :bp<CR>
+nnoremap ; :
+nnoremap <F5> :buffers<CR>:buffer<Space>
+let mapleader = ','
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-H> <C-W>h<C-W>_
+map <C-L> <C-W>l<C-W>_
+" clear highlighted search
+nmap <silent> <leader>/ :nohlsearch<CR>
+" shortcut to edit file in the same directory
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" show invisibles
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+" set list
+
+" auto change directory to current buffer
+" set autochdir
+" autocmd BufEnter * silent! lcd %:p:h " make sure plugins work
+
+" commands and auto commands
+"
+command! W exec 'w !sudo tee % > /dev/null' | e!
+autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown spell
+autocmd BufRead,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit tw=72 wrap spell
+autocmd BufRead,BufNewFile {*.py} set et sts=4 sw=4 ts=4
+
+" Jump back to last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
