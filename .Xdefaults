@@ -1,4 +1,4 @@
-URxvt.perl-ext-common: default,matcher,keyboard-select,selection-to-clipboard,clipboard,font-size
+URxvt.perl-ext-common: default,matcher,keyboard-select,selection-to-clipboard,font-size
 
 !,tabbedex
 
@@ -43,13 +43,6 @@ URxvt.visualBell: false
 URxvt.matcher.button: 1
 ! URxvt.urlLauncher: /usr/bin/xdg-open
 URxvt.url-launcher: /usr/bin/xdg-open
-
-! Copy and paste, requires clippboard module and xclip
-! See ~/.urxvt/ext/clipboard
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: false
-
 
 ! http://www.color-hex.com/
 
