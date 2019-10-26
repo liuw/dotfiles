@@ -3,7 +3,7 @@
 	email = liuw@liuw.name
 
 [core]
-	editor = vim -c 'set ft=gitcommit tw=70 wrap' -c ':0'
+	editor = vim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
 
 [rerere]
 	enabled = true
