@@ -47,6 +47,7 @@ map <UP> gk
 map <DOWN> gj
 nmap <silent> <tab> :bn<CR>
 nmap <silent> <s-tab> :bp<CR>
+nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map <C-J> <C-W>j<C-W>_
