@@ -20,14 +20,14 @@ URxvt*urgentOnBell: false
 URxvt*shading:200
 
 ! Comment out following line to use bitmap font
-! URxvt*font: xft:Monospace:size=9
-! URxvt*font: xft:Bitstream Vera Sans Mono:size=9
-! URxvt*font: xft:Bitstream Vera Sans Mono:size=10:hintstyle=full
-! URxvt*font: xft:Liberation Mono:size=10
-! URxvt*font: xft:DejaVu Sans Mono:size=10:hintstyle=light
+URxvt*font: xft:Monospace:size=12
+! URxvt*font: xft:Bitstream Vera Sans Mono:size=8:hintstyle=hintslight
+! URxvt*font: xft:Bitstream Vera Sans Mono:size=10:hintstyle=hintfull
+! URxvt*font: xft:Liberation Mono:size=9
+! URxvt*font: xft:DejaVu Sans Mono:size=10:hintstyle=hintslight
 ! URxvt*font: xft:PT Mono:size=10
 ! URxvt*font: xft:Monte Carlo:size=9:antialias=false
-URxvt*font: xft:Source Code Pro:size=10
+! URxvt*font: xft:Source Code Pro:size=9
 
 ! No bold font please
 URxvt*boldFont:
