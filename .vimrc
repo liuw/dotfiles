@@ -44,6 +44,7 @@ set linebreak
 set laststatus=2
 set guioptions-=T
 set ttyfast
+set mouse=a
 syntax on
 colorscheme desert
 
