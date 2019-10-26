@@ -48,11 +48,9 @@ syntax on
 colorscheme desert
 
 " Highlight on overlength
-if exists('+colorcolumn')
-	set colorcolumn=80
-	highlight link OverLength colorcolumn
-	" exec 'match OverLength /\%'.&cc.'v.\+/'
-endif
+set colorcolumn=80
+highlight link OverLength colorcolumn
+" exec 'match OverLength /\%'.&cc.'v.\+/'
 
 " Inspect first and last 10 lines for Vim modeline
 " Help modeline for more information
@@ -109,9 +107,7 @@ autocmd BufRead,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit tw=72 wrap spell
 autocmd BufRead,BufNewFile {*.py} set et sts=4 sw=4 ts=4
 
 " Jump back to last position when reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Rust settings
 let g:rustfmt_autosave = 1
