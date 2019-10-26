@@ -1,0 +1,5 @@
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias x=sudo
+alias e='emacs -nw'
+alias v=nvim
+alias g=git
