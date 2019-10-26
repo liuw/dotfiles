@@ -1,5 +1,7 @@
 set nocompatible
 set nobackup
+" let mapleader = ','
+let mapleader = "\<Space>"
 
 " searching options
 set hlsearch incsearch
@@ -47,7 +49,6 @@ nmap <silent> <tab> :bn<CR>
 nmap <silent> <s-tab> :bp<CR>
 nnoremap ; :
 nnoremap <F5> :buffers<CR>:buffer<Space>
-let mapleader = ','
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
