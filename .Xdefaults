@@ -1,0 +1,130 @@
+URxvt.perl-ext-common: default,matcher,keyboard-select,selection-to-clipboard,clipboard,font-size
+
+!,tabbedex
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! Do nott show scroll bar
+URxvt.scrollBar: off
+! Do not scroll output
+URxvt.scrollTtyOutput: false
+! Scroll in relation to buffer (with mouse scroll or Shift+PgUp)
+URxvt.scrollWithBuffer: true
+! Scroll to bottom on keypress
+URxvt.scrollTtyKeypress: true
+! Disalbe scroll back buffer for secondary screen
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
+
+URxvt*urgentOnBell: false
+URxvt*shading:200
+
+! Comment out following line to use bitmap font
+! URxvt*font: xft:Monospace:size=9
+! URxvt*font: xft:Bitstream Vera Sans Mono:size=9
+! URxvt*font: xft:Bitstream Vera Sans Mono:size=10:hintstyle=full
+! URxvt*font: xft:Liberation Mono:size=10
+! URxvt*font: xft:DejaVu Sans Mono:size=10:hintstyle=light
+! URxvt*font: xft:PT Mono:size=10
+! URxvt*font: xft:Monte Carlo:size=9:antialias=false
+URxvt*font: xft:Source Code Pro:size=10
+
+! No bold font please
+URxvt*boldFont:
+
+
+! URxvt.letterSpace: -1
+
+
+URxvt.loginShell: true
+URxvt.visualBell: false
+
+! Clickable URLs, requires matcher
+URxvt.matcher.button: 1
+! URxvt.urlLauncher: /usr/bin/xdg-open
+URxvt.url-launcher: /usr/bin/xdg-open
+
+! Copy and paste, requires clippboard module and xclip
+! See ~/.urxvt/ext/clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: false
+
+
+! http://www.color-hex.com/
+
+!BLK Cursor
+#define _color0        #000d18
+#define _color8        #000d18
+!RED Tag
+#define _color1        #e89393
+#define _color9        #e89393
+!GRN SpecialKey
+#define _color2        #9ece9e
+#define _color10       #9ece9e
+!YEL Keyword
+#define _color3        #f0dfaf
+#define _color11       #f0dfaf
+!BLU Number
+! #define _color4        #1f5b83
+! #define _color12       #1f5b83
+#define _color4        #609ae3
+#define _color12       #609ae3
+!MAG Precondit
+#define _color5        #c0bed1
+#define _color13       #c0bed1
+!CYN Float
+#define _color6        #dfaf8f
+#define _color14       #dfaf8f
+!WHT Search
+#define _color7        #efefef
+#define _color15       #efefef
+!FMT Include, StatusLine, ErrorMsg
+#define _colorBD       #ffcfaf
+#define _colorUL       #ccdc90
+#define _colorIT       #80d4aa
+!TXT Normal, Normal, Cursor
+#define _foreground    #dcdccc
+#define _background    #1f1f1f
+#define _cursorColor   #8faf9f
+
+! URxvt*color0         : _color0
+! URxvt*color1         : _color1
+! URxvt*color2         : _color2
+! URxvt*color3         : _color3
+! URxvt*color4         : _color4
+! URxvt*color5         : _color5
+! URxvt*color6         : _color6
+! URxvt*color7         : _color7
+! URxvt*color8         : _color8
+! URxvt*color9         : _color9
+! URxvt*color10        : _color10
+! URxvt*color11        : _color11
+! URxvt*color12        : _color12
+! URxvt*color13        : _color13
+! URxvt*color14        : _color14
+! URxvt*color15        : _color15
+! URxvt*colorBD        : _colorBD
+! URxvt*colorIT        : _colorIT
+! URxvt*colorUL        : _colorUL
+! URxvt*foreground     : _foreground
+! URxvt*background     : _background
+! URxvt*cursorColor    : _cursorColor
+
+URxvt*color4         : _color4
+URxvt*color12        : _color12
+URxvt*background: Black
+URxvt*foreground: White
+
+URxvt.cursorBlink: false
+
+Xft.antialias:  1
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+! Xft.hintstyle:  hintlight
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       grayscale
+
+! emacs.font: -misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1
+emacs.font: 7x13
+
