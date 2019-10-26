@@ -3,6 +3,27 @@ set nobackup
 " let mapleader = ','
 let mapleader = "\<Space>"
 
+" plugins
+"  see https://github.com/junegunn/vim-plug
+"  need to have vim-plug installed
+call plug#begin('~/.vim/plugged')
+
+" UI improvement
+Plug 'itchyny/lightline.vim'
+Plug 'machakann/vim-highlightedyank'
+
+" Language server protocol
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" Language support
+Plug 'rust-lang/rust.vim'
+
+call plug#end()
+
 " searching options
 set hlsearch incsearch
 set ignorecase smartcase
@@ -58,6 +79,8 @@ nmap <silent> <s-tab> :bp<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 nnoremap <F5> :buffers<CR>:buffer<Space>
+" fzf
+map <C-p> :Files<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
