@@ -4,7 +4,7 @@ URxvt.perl-ext-common: default,matcher,keyboard-select,selection-to-clipboard,fo
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
-! Do nott show scroll bar
+! Do not show scroll bar
 URxvt.scrollBar: off
 ! Do not scroll output
 URxvt.scrollTtyOutput: false
