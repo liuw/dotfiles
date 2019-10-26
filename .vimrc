@@ -21,6 +21,8 @@ Plug 'junegunn/fzf.vim'
 
 " Language support
 Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
