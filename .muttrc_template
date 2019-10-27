@@ -1,0 +1,136 @@
+set charset = "UTF-8"
+set from = "Firstname Lastname <first.last@example.com>"
+set realname = "Firstname Lastname"
+
+# IMAP settings
+# set imap_user = ""
+# set imap_pass = ""
+# set imap_keepalive = 900
+
+#set smtp_url = "smtp://"
+#unset smtp_pass
+
+# Local mailboxes
+#set folder = "/local/mail/folders"
+#set spoolfile = "/local/mail/folders/Inbox"
+#set postponed = "/local/mail/folders/Drafts"
+#set record = "/local/mail/folders/Sent"
+
+# Local maildirs
+set mbox_type = Maildir
+set mask=".*" # otherwise it won't work as expected
+set folder = "/local/mail/maildir/"
+set spoolfile = "+.Inbox"
+set postponed = "+.Drafts"
+set record = "+.Sent"
+
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+
+# Reading mail
+set move = no
+set timeout = 10
+set mail_check = 10
+set sort = date
+set sort_aux = date
+set mark_old = no
+ignore *
+unignore Date: From: To: CC: Bcc: Subject: Message-Id:
+hdr_order Subject: Date: From: To: CC: Bcc:
+set index_format = "%6C %{%b %d} %-15.15L [%Z] %s"
+
+# Composing mail
+set editor='vim +"set spell" +"set tw=72" "+silent! /^\s*\n/" +nohl +0'
+# Or use emacsclient if I'm in the mood
+#set editor='~/bin/emacsclientmutt'
+my_hdr Cc: Firstname Lastname <first.last@example.com>
+set include = yes
+set forward_format = "Fwd: %s"
+set metoo = yes
+set sig_dashes = no # my signature contains only my name
+# set signature="~/.mutt-signature"
+
+# Colors
+color status white blue
+color index cyan default "~(~v ~p)"
+color index green  default ~N  # new
+color index red default ~D  # deleted
+color index brightmagenta default ~T  # tagged
+color index brightyellow default ~F  # flagged
+color header green default "^Subject:"
+color header yellow default "^Date:"
+color header yellow default "^To:"
+color header yellow default "^Cc:"
+color header yellow default "^Bcc:"
+color header yellow default "^From:"
+color header red default "^X-.*:"
+
+# Pager configuration
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+# Misc
+set beep_new = yes
+set quit = ask-no
+set alias_file = /local/mail/mutt_alias
+source $alias_file
+
+macro index M "T.*\n;WN;^T.*\n" "Mark all messages as read"
+
+# Safe deletion macros apply for all folders, EXCEPT the 'deleted' folder.
+## "Y" is set to 'unsafe delete' (useful over slow imap links).
+## Also note the slight difference between 'index' and 'pager' for thread
+## delete. The "\ni" will cause mutt to briefly switch to pager mode and
+## back to index, causing the thread to uncollapse. It's a trick but as
+## a trick goes, it works really well (for me, at least) :)
+
+bind  index   y   delete-message
+bind  pager   y   delete-message
+
+folder-hook . 'macro index d  <copy-message>=.deleted\ny<delete-message>  "Safe Delete"'
+folder-hook . 'macro pager d  <copy-message>=.deleted\ny<delete-message>  "Safe Delete"'
+folder-hook . 'macro index \ed \ni<tag-thread><copy-message>=.deleted\ny<delete-message> "Safe delete Thread"'
+folder-hook . 'macro pager \ed <tag-thread><copy-message>=.deleted\ny<delete-message>    "Safe delete Thread"'
+
+## Really erase if we're using the 'deleted' mail folder.
+
+folder-hook '.deleted' 'macro index d   <delete-message> "Delete Message"'
+folder-hook '.deleted' 'macro index \ed <delete-thread>  "Delete Thread"'
+folder-hook '.deleted' 'macro pager d   <delete-message> "Delete Message"'
+folder-hook '.deleted' 'macro pager \ed   <delete-message> "Delete Thread"'
+
+
+## HTML
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+## Color for diff
+#
+color body brightred default "^-.*"
+color body brightgreen default "^[+].*"
+color body brightwhite default "^diff --git.*"
+color body brightwhite default "^index [a-f0-9].*"
+color body brightyellow default "^@@.*"
+
+#color   normal  white           default
+#color   body    brightwhite     default         ^[[:space:]].*
+#color   body    brightwhite     default         ^(diff).*
+#color   body    white           default         ^[\-\-\-].*
+#color   body    white           default         ^[\+\+\+].*
+#color   body    green           default         ^[\+].*
+#color   body    red             default         ^[\-].*
+#color   body    brightblue      default         [@@].*
+#color   body    brightwhite     default         ^(\s).*
+#color   body    brightwhite     default         ^(Signed-off-by).*
+#color   body    brightwhite     default         ^(Cc)
+#
+
+# Use GPGME
+set crypt_use_gpgme = yes
+
+# set crypt_autosign = yes
+
