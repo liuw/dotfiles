@@ -1,6 +1,7 @@
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias x=sudo
 alias e='emacs -nw'
-alias v=nvim
+alias v=vim
+alias nv=nvim
 alias g=git
 alias gg='git grep'
