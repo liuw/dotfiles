@@ -3,3 +3,4 @@ alias x=sudo
 alias e='emacs -nw'
 alias v=nvim
 alias g=git
+alias gg='git grep'
