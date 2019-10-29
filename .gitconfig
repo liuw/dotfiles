@@ -31,6 +31,7 @@
 	di = diff
 	dt = difftool
 	sh = show
+	pu = pull
 	oneline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 	curr = rev-parse --abbrev-ref HEAD
