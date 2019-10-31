@@ -17,7 +17,8 @@ URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
 
 URxvt*urgentOnBell: false
-URxvt*shading:200
+URxvt*shading:30
+URxvt*transparent: true
 
 ! Comment out following line to use bitmap font
 URxvt*font: xft:Monospace:size=12
