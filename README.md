@@ -1,14 +1,14 @@
 # Setting up
 ```sh
 git init --bare $HOME/dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-config config --local showUntrackFiles no
+alias cfg='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+cfg config --local showUntrackFiles no
 ```
 
 # Configuration
 ```sh
-config remote add origin git@github.com:liuw/dotfiles.git
-config config status.showUntrackedFiles no
+cfg remote add origin git@github.com:liuw/dotfiles.git
+cfg config status.showUntrackedFiles no
 ```
 
 # Replication
@@ -20,8 +20,8 @@ rm -rf conf-tmp
 
 # Usage
 ```sh
-config status
-config add .gitignore
-config commit -m'Add gitignore'
-config push origin
+cfg status
+cfg add .gitignore
+cfg commit -m'Add gitignore'
+cfg push origin
 ```
