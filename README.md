@@ -2,7 +2,7 @@
 ```sh
 git init --bare $HOME/dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-cfg config --local showUntrackFiles no
+cfg config --local status.showUntrackFiles no
 ```
 
 # Configuration
