@@ -71,6 +71,7 @@ set clipboard+=unnamed " yanks go to clipboard
 imap jk <Esc>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+nmap <leader>d :bd<CR>
 map <UP> gk
 map <DOWN> gj
 nmap <silent> <tab> :bn<CR>
