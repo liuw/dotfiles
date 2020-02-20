@@ -112,3 +112,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " Rust settings
 let g:rustfmt_autosave = 1
 autocmd FileType rust set colorcolumn=100 shiftwidth=4 softtabstop=4 tabstop=4 et
+
+" Read any local settings
+if filereadable($HOME . "/.vimrc.local")
+    source $HOME/.vimrc.local
+endif
