@@ -9,6 +9,8 @@ cfg config --local status.showUntrackFiles no
 ```sh
 cfg remote add origin git@github.com:liuw/dotfiles.git
 cfg config status.showUntrackedFiles no
+cfg config user.name $NAME
+cfg config user.email $EMAIL
 ```
 
 # Replication

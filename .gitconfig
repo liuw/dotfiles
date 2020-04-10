@@ -1,6 +1,5 @@
 [user]
-	name = Wei Liu
-	email = liuw@liuw.name
+	useConfigOnly = true
 
 [core]
 	editor = vim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
