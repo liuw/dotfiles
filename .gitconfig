@@ -3,6 +3,9 @@
 
 [core]
 	editor = vim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
+	abbrev = 12
+[pretty]
+	fixes = Fixes: %h (\"%s\")
 
 [rerere]
 	enabled = true
