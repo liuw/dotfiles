@@ -5,6 +5,8 @@ alias v=vim
 alias nv=nvim
 alias g=git
 alias gg='git grep'
+alias gl='global -x'
+alias glr='global -xr'
 
 # Source any local settings. Leave it last.
 [ -f ~/.aliases.local ] && source ~/.aliases.local
