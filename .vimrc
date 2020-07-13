@@ -46,7 +46,7 @@ set guioptions-=T
 set ttyfast
 set mouse=a
 syntax on
-colorscheme delek
+colorscheme desert
 
 " Highlight boundary. Use 80 by default but can be overridden.
 set colorcolumn=80
