@@ -74,8 +74,8 @@ nmap <leader>q :q<CR>
 nmap <leader>d :bd<CR>
 map <UP> gk
 map <DOWN> gj
-nmap <silent> <tab> :bn<CR>
-nmap <silent> <s-tab> :bp<CR>
+nmap <silent> <tab> :bn<CR> :echo @%<CR>
+nmap <silent> <s-tab> :bp<CR> :echo @%<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 nnoremap <F5> :buffers<CR>:buffer<Space>
