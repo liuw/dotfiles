@@ -117,3 +117,6 @@ autocmd FileType rust set colorcolumn=100 shiftwidth=4 softtabstop=4 tabstop=4 e
 if filereadable($HOME . "/.vimrc.local")
     source $HOME/.vimrc.local
 endif
+
+" For a list of highlight colors, use :hi
+hi Pmenu  ctermfg=0 ctermbg=8 guibg=Magenta
