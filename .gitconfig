@@ -36,6 +36,7 @@
 	pu = pull
 	oneline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	re = remote -v
+	fe = fetch
 
 	curr = rev-parse --abbrev-ref HEAD
 	refactor = !sh -c 'git grep -l \"$1\" -- $GIT_PREFIX | xargs sed \"s|$1|$2|g\" -i' -
