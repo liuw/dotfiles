@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 " UI improvement
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'machakann/vim-highlightedyank'
 
 " Language server protocol
@@ -120,3 +121,19 @@ endif
 
 " For a list of highlight colors, use :hi
 hi Pmenu  ctermfg=0 ctermbg=8 guibg=Magenta
+
+" Lightline configuration
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ }
+      \ }
+
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'gitbranch_path'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
