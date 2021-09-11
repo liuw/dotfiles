@@ -85,9 +85,11 @@ nmap <silent> <tab> :bn<CR> :echo @%<CR>
 nmap <silent> <s-tab> :bp<CR> :echo @%<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
-nnoremap <F5> :buffers<CR>:buffer<Space>
-" FZF
+
+" Commands from FZF
+nnoremap <F5> :Buffers<CR>
 map <C-p> :Files<CR>
+
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
