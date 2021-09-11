@@ -25,6 +25,12 @@ Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 
+" When started with plain Vim, the plugin is not registered
+" and PlugClean will try to remove it
+if has('nvim')
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+endif
+
 call plug#end()
 
 " Searching options
