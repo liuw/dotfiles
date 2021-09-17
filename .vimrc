@@ -89,7 +89,8 @@ nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 
 " Commands from FZF
-nnoremap <F5> :Buffers<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
 map <C-p> :Files<CR>
 
 map <C-J> <C-W>j<C-W>_
