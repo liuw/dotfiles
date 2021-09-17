@@ -44,6 +44,7 @@ set splitright
 set splitbelow
 
 " General user interface
+set number
 set relativenumber
 set ruler
 set showcmd
