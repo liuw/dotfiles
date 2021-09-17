@@ -28,6 +28,8 @@ Plug 'stephpy/vim-yaml'
 " When started with plain Vim, the plugin is not registered
 " and PlugClean will try to remove it
 if has('nvim')
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 endif
 
