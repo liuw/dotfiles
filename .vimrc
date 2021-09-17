@@ -58,6 +58,12 @@ set mouse=a
 syntax on
 colorscheme desert
 
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+
 " Highlight boundary. Use 80 by default but can be overridden.
 set colorcolumn=80
 
