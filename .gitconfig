@@ -7,9 +7,6 @@
 [pretty]
 	fixes = Fixes: %h (\"%s\")
 
-[rerere]
-	enabled = true
-
 [color]
 	ui = auto
 
