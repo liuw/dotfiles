@@ -30,7 +30,7 @@
 	br = branch -vv
 	di = diff
 	dt = difftool
-	sh = show
+	sh = show -p --stat
 	pu = pull
 	oneline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	re = remote -v
