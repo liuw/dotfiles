@@ -85,27 +85,28 @@ set clipboard+=unnamed " yanks go to clipboard
 
 " Customized mappings
 imap jk <Esc>
-nmap <leader>w :w<CR>
-nmap <leader>q :q<CR>
-nmap <leader>d :bprevious<CR>:bd#<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>d :bprevious<CR>:bd#<CR>
 map <UP> gk
 map <DOWN> gj
 nmap <silent> <tab> :bn<CR> :echo @%<CR>
 nmap <silent> <s-tab> :bp<CR> :echo @%<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
+nnoremap : ;
 
 " Commands from FZF
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
-map <C-p> :Files<CR>
+noremap <C-p> :Files<CR>
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
 map <C-L> <C-W>l<C-W>_
 " Clear highlighted search
-nmap <silent> <leader>/ :nohlsearch<CR>
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 " Shortcut to edit file in the same directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
