@@ -84,7 +84,7 @@ set autoread autowrite
 set clipboard+=unnamed " yanks go to clipboard
 
 " Customized mappings
-imap jk <Esc>
+" imap jk <Esc>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bprevious<CR>:bd#<CR>
