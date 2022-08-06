@@ -133,11 +133,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 let g:rustfmt_autosave = 1
 autocmd FileType rust set colorcolumn=100 shiftwidth=4 softtabstop=4 tabstop=4 et
 
-" Read any local settings
-if filereadable($HOME . "/.vimrc.local")
-    source $HOME/.vimrc.local
-endif
-
 " For a list of highlight colors, use :hi
 hi Pmenu  ctermfg=0 ctermbg=8 guibg=Magenta
 
@@ -177,3 +172,8 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Read any local settings
+if filereadable($HOME . "/.vimrc.local")
+    source $HOME/.vimrc.local
+endif
