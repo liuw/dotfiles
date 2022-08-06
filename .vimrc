@@ -90,8 +90,8 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bprevious<CR>:bd#<CR>
 map <UP> gk
 map <DOWN> gj
-nmap <silent> <tab> :bn<CR> :echo @%<CR>
-nmap <silent> <s-tab> :bp<CR> :echo @%<CR>
+" nmap <silent> <tab> :bn<CR> :echo @%<CR>
+" nmap <silent> <s-tab> :bp<CR> :echo @%<CR>
 nnoremap <silent> <leader><leader> <C-^>
 nnoremap ; :
 nnoremap : ;
