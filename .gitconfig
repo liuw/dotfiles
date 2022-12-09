@@ -1,5 +1,6 @@
 [user]
 	useConfigOnly = true
+	name = Wei Liu
 
 [core]
 	editor = vim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
