@@ -23,6 +23,7 @@
 	enabled = true
 
 [alias]
+	l = log --stat
 	st = status -s
 	ci = commit
 	cp = cherry-pick
