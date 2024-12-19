@@ -1,3 +1,9 @@
+" CHEAT SHEET: useful things that don't stick in my head
+" gv -- reselect last visual selection
+" o -- move to other end of highlighted text
+" c-r c-w -- insert word under cursor in command mode
+" c-r {register} -- insert register in command mode
+
 set nocompatible
 set nobackup
 " let mapleader = ','
