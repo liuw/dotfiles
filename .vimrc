@@ -88,6 +88,8 @@ set clipboard+=unnamed " yanks go to clipboard
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bprevious<CR>:bd#<CR>
+nnoremap <c-u> <c-u>zz
+nnoremap <c-d> <c-d>zz
 map <UP> gk
 map <DOWN> gj
 " nmap <silent> <tab> :bn<CR> :echo @%<CR>
