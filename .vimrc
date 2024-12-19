@@ -33,6 +33,12 @@ if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 endif
 
+" GitHub copilot
+Plug 'github/copilot.vim'
+if has('nvim')
+  Plug 'CopilotC-Nvim/CopilotChat.nvim'
+endif
+
 call plug#end()
 
 " Searching options
@@ -174,6 +180,17 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Neovim specific configuration
+if has('nvim')
+lua << EOF
+require("CopilotChat").setup({
+  -- All defaults
+  -- See https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#configuration
+})
+EOF
+nnoremap <leader>cc :CopilotChatToggle<CR>
+endif
 
 " Read any local settings
 if filereadable($HOME . "/.vimrc.local")
