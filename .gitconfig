@@ -60,3 +60,18 @@
 	verbose = true
 [merge]
 	conflictStyle = diff3
+
+[stgit.alias]
+	sh = !git sh
+	pu = push
+	po = pop
+	r = refresh
+	ed = edit -d
+	l = series -d -e
+	n = new
+	di = diff
+	st = !git st # use shell alias to stop stgit from whining
+	br = branch -l
+	b = branch
+[stgit]
+	autosign = Signed-off-by
