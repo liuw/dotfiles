@@ -62,12 +62,13 @@
 	conflictStyle = diff3
 
 [stgit.alias]
-	sh = !git sh
+	sh = show
 	pu = push
 	po = pop
 	r = refresh
 	ed = edit -d
 	l = series -d -e
+	la = series -d -e -a
 	n = new
 	di = diff
 	st = !git st # use shell alias to stop stgit from whining
