@@ -16,6 +16,10 @@ set realname = "Firstname Lastname"
 #set postponed = "/local/mail/folders/Drafts"
 #set record = "/local/mail/folders/Sent"
 
+# Use easier to recognize message IDs
+set message_id_format = "<%Y%02m%02d%02H%02M%02S.G%c%p@%f>"
+# set hostname = "myhostname" # In case the FQDN is too long
+
 # Local maildirs
 set mbox_type = Maildir
 set mask=".*" # otherwise it won't work as expected
