@@ -115,10 +115,10 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 noremap <C-p> :Files<CR>
 
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-L> <C-W>l<C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 " Clear highlighted search
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 " Shortcut to edit file in the same directory
