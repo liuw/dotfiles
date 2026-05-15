@@ -3,7 +3,7 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter').setup {
   ensure_installed = "all",
   highlight = {
     enable = true,              -- false will disable the whole extension
