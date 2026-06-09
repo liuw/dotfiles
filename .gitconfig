@@ -3,7 +3,7 @@
 	name = Wei Liu
 
 [core]
-	editor = nvim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
+	editor = vim -c 'set ft=gitcommit tw=72 wrap spell' -c ':0'
 	abbrev = 12
 	pager = less -S
 [pretty]
